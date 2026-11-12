@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal tecnológico sobre Robots Quirúrgicos Asistidos por Inteligencia Artificial y Cirugía de Precisión Remota.">
+  <title>NeuroSurg AI | Robótica Quirúrgica y Telecirugía de Precisión</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Estilos personalizados compilados con Sass (Overrides de Bootstrap) y optimizados con Lightning CSS -->
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR RESPONSIVE -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#inicio">
+        <span class="brand-pulse"></span>
+        <span>NeuroSurg<span class="text-primary">AI</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#arquitectura">Arquitectura IA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#comparativa">Plataformas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#simulador">Simulador Remoto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Protocolos</a></li>
+        </ul>
+        <a href="#simulador" class="btn btn-primary btn-sm ms-lg-3 px-3 fw-semibold">
+          <i class="bi bi-cpu me-1"></i> Probar Telemetría
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="badge-tech mb-3">
+            <i class="bi bi-broadcast text-primary me-2"></i>TELECIRUGÍA 5G/6G + VISIÓN ESTEREOSCÓPICA IA
+          </div>
+          <h1 class="display-4 fw-bold lh-sm mb-4">
+            Robots Quirúrgicos Asistidos por <span class="text-gradient">Inteligencia Artificial</span> y Cirugía Remota
+          </h1>
+          <p class="lead text-secondary-light mb-4">
+            Precisión submilimétrica de 0.05 mm, filtración total del temblor humano y retroalimentación háptica en tiempo real para intervenciones quirúrgicas a distancia sin fronteras geográficas.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="#simulador" class="btn btn-primary btn-lg px-4 fw-semibold">
+              <i class="bi bi-activity me-2"></i>Simulador de Telecirugía
+            </a>
+            <a href="#arquitectura" class="btn btn-outline-light btn-lg px-4">
+              Explorar Tecnología
+            </a>
+          </div>
+
+          <!-- MÉTRICAS CLAVE -->
+          <div class="row g-3 telemetry-strip">
+            <div class="col-4">
+              <div class="metric-box">
+                <span class="h3 fw-bold text-primary d-block mb-0">0.05 mm</span>
+                <small class="text-muted">Exactitud Motriz</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="metric-box">
+                <span class="h3 fw-bold text-success d-block mb-0">&lt; 4.2 ms</span>
+                <small class="text-muted">Latencia Óptica</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="metric-box">
+                <span class="h3 fw-bold text-info d-block mb-0">99.8%</span>
+                <small class="text-muted">Filtro de Temblor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL VISUAL DE TELEMETRÍA ROBÓTICA -->
+        <div class="col-lg-5">
+          <div class="glass-card p-4 position-relative">
+            <div class="d-flex justify-content-between align-items-center border-bottom border-secondary border-opacity-25 pb-3 mb-3">
+              <span class="small fw-semibold text-uppercase text-primary">
+                <i class="bi bi-shield-check me-1"></i> Unidad Quirúrgica Autónoma v4.2
+              </span>
+              <span class="badge bg-success bg-opacity-25 text-success border border-success">ENLACE ACTIVO</span>
+            </div>
+
+            <!-- Ilustración SVG Vectorial de Brazo Robótico y Escaneo -->
+            <div class="robot-viewport my-3 text-center">
+              <svg viewBox="0 0 360 220" class="w-100" role="img" aria-label="Diagrama de precisión de brazo robótico quirúrgico">
+                <defs>
+                  <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+                <!-- Cuadrícula clínica -->
+                <g stroke="#1e293b" stroke-width="1">
+                  <line x1="20" y1="40" x2="340" y2="40"/>
+                  <line x1="20" y1="110" x2="340" y2="110"/>
+                  <line x1="20" y1="180" x2="340" y2="180"/>
+                  <line x1="90" y1="20" x2="90" y2="200"/>
+                  <line x1="180" y1="20" x2="180" y2="200"/>
+                  <line x1="270" y1="20" x2="270" y2="200"/>
+                </g>
+                <!-- Haz de visión artificial -->
+                <polygon points="110,65 255,145 215,175" fill="url(#beamGrad)"/>
+                <!-- Brazo robótico articulado -->
+                <polyline points="55,180 85,105 155,75 225,135" fill="none" stroke="#00d4ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="85" cy="105" r="9" fill="#0f172a" stroke="#00d4ff" stroke-width="3"/>
+                <circle cx="155" cy="75" r="9" fill="#0f172a" stroke="#00d4ff" stroke-width="3"/>
+                <circle cx="225" cy="135" r="7" fill="#10b981"/>
+                <!-- Punto objetivo submilimétrico -->
+                <circle cx="245" cy="155" r="18" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <circle cx="245" cy="155" r="4" fill="#10b981"/>
+                <text x="268" y="152" fill="#e2e8f0" font-size="11" font-family="monospace">ΔX: 0.02mm</text>
+                <text x="268" y="167" fill="#10b981" font-size="11" font-family="monospace">IA LOCK: OK</text>
+              </svg>
+            </div>
+
+            <div class="row g-2 text-center small mt-2">
+              <div class="col-6">
+                <div class="p-2 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25">
+                  <span class="text-muted d-block">Grados de Libertad</span>
+                  <strong class="text-white">7 Ejes Articulados</strong>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25">
+                  <span class="text-muted d-block">Sensores Hápticos</span>
+                  <strong class="text-success">1,000 Hz / Tiempo Real</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 2: ARQUITECTURA TECNOLÓGICA -->
+  <section id="arquitectura" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+        <span class="text-primary fw-semibold text-uppercase small">Ingeniería Biomédica e IA</span>
+        <h2 class="fw-bold mt-2">Tres Pilares de la Cirugía Robótica Autónoma</h2>
+        <p class="text-secondary-light">
+          La integración de redes neuronales profundas con actuadores robóticos de alta precisión transforma procedimientos complejos en intervenciones mínimamente invasivas.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="glass-card h-100 p-4">
+            <div class="icon-box mb-3">
+              <i class="bi bi-eye text-primary fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold">Visión Artificial Estereoscópica 3D</h3>
+            <p class="text-secondary-light small mb-0">
+              Cámaras endoscópicas de ultra alta definición combinadas con modelos de segmentación semántica identifican vasos sanguíneos, nervios y márgenes tumorales en tiempo real mediante realidad aumentada intraoperatoria.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="glass-card h-100 p-4">
+            <div class="icon-box mb-3">
+              <i class="bi bi-router text-success fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold">Telecirugía de Ultra Baja Latencia</h3>
+            <p class="text-secondary-light small mb-0">
+              Mediante enlaces dedicados de fibra óptica y redes 5G/6G con protocolos deterministas, un cirujano especialista puede operar desde otro país mientras la IA local predice y compensa microvariaciones de red.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+          <article class="glass-card h-100 p-4">
+            <div class="icon-box mb-3">
+              <i class="bi bi-hand-index-thumb text-info fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold">Retroalimentación Háptica y Escalado</h3>
+            <p class="text-secondary-light small mb-0">
+              Sensores piezoeléctricos transmiten al cirujano la resistencia exacta de cada tejido. Además, el escalado de movimiento convierte gestos de 5 cm en desplazamientos microquirúrgicos de 0.5 mm.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: COMPARATIVA DE PARADIGMAS QUIRÚRGICOS -->
+  <section id="comparativa" class="py-5 bg-section-alt">
+    <div class="container py-4">
+      <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+        <span class="text-primary fw-semibold text-uppercase small">Evolución Clínica</span>
+        <h2 class="fw-bold mt-2">Comparativa de Sistemas Quirúrgicos</h2>
+        <p class="text-secondary-light">
+          Impacto cuantitativo de la asistencia por inteligencia artificial frente a las técnicas quirúrgicas convencionales.
+        </p>
+      </div>
+
+      <div class="glass-card p-3 p-md-4">
+        <div class="table-responsive">
+          <table class="table table-dark table-hover align-middle mb-0">
+            <thead>
+              <tr class="text-primary border-bottom border-primary border-opacity-50">
+                <th>Parámetro Clínico</th>
+                <th>Laparoscopía Convencional</th>
+                <th>Robótica Teleoperada Clásica</th>
+                <th>Robótica Asistida por IA (2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-semibold">Precisión de posicionamiento</td>
+                <td>1.5 mm – 2.0 mm</td>
+                <td>0.2 mm – 0.5 mm</td>
+                <td><span class="badge bg-success bg-opacity-25 text-success">0.05 mm (Submilimétrica)</span></td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Filtración de temblor fisiológico</td>
+                <td>No disponible (manual)</td>
+                <td>Filtrado mecánico básico</td>
+                <td>Filtrado adaptativo IA (99.8 %)</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Capacidad de cirugía remota</td>
+                <td>Nula (presencial)</td>
+                <td>Limitada a red local</td>
+                <td>Intercontinental (&lt; 15 ms compensada)</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Reconocimiento anatómico</td>
+                <td>Visualización 2D estándar</td>
+                <td>Visión 3D sin asistencia</td>
+                <td>Superposición 3D IA + alertas de riesgo</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Tiempo promedio de hospitalización</td>
+                <td>4 a 6 días</td>
+                <td>2 a 3 días</td>
+                <td>24 a 48 horas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: SIMULADOR INTERACTIVO DE CIRUGÍA REMOTA -->
+  <section id="simulador" class="py-5">
+    <div class="container py-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <span class="text-primary fw-semibold text-uppercase small">Módulo Interactivo</span>
+          <h2 class="fw-bold mt-2 mb-3">Simulador de Enlace en Telecirugía Remota</h2>
+          <p class="text-secondary-light">
+            Configura los parámetros de conexión entre la consola del cirujano y el quirófano robótico para evaluar cómo la IA predictiva mantiene la estabilidad operativa a larga distancia.
+          </p>
+          <div class="alert bg-primary bg-opacity-10 border border-primary border-opacity-25 text-light small">
+            <i class="bi bi-info-circle text-primary me-2"></i>
+            El umbral clínico seguro para telecirugía en tiempo real se sitúa por debajo de los <strong>100 ms</strong> con compensación predictiva activa.
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="glass-card p-4">
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="selectProcedimiento" class="form-label small fw-semibold">Especialidad Quirúrgica</label>
+                <select id="selectProcedimiento" class="form-select bg-dark text-light border-secondary">
+                  <option value="neuro">Neurocirugía Estereotáctica</option>
+                  <option value="cardio">Cirugía Cardiovascular Mínimamente Invasiva</option>
+                  <option value="onco">Resección Oncológica Robótica</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="selectRed" class="form-label small fw-semibold">Infraestructura de Red</label>
+                <select id="selectRed" class="form-select bg-dark text-light border-secondary">
+                  <option value="fibra">Fibra Óptica Dedicada (Ultra-Baja Latencia)</option>
+                  <option value="5g">Red 5G Standalone / Slicing Clínico</option>
+                  <option value="satelite">Enlace Satelital Órbita Baja (LEO)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <div class="d-flex justify-content-between">
+                  <label for="rangoDistancia" class="form-label small fw-semibold">Distancia Cirujano — Quirófano</label>
+                  <span id="valorDistancia" class="text-primary fw-bold small">450 km</span>
+                </div>
+                <input type="range" class="form-range" id="rangoDistancia" min="10" max="5000" step="10" value="450">
+              </div>
+            </div>
+
+            <!-- RESULTADOS EN TIEMPO REAL -->
+            <div class="p-3 rounded-3 bg-dark bg-opacity-75 border border-secondary border-opacity-25">
+              <div class="row text-center g-3">
+                <div class="col-sm-4">
+                  <small class="text-muted d-block">Latencia Total de Ida y Vuelta</small>
+                  <span id="resultadoLatencia" class="h4 fw-bold text-primary">8.5 ms</span>
+                </div>
+                <div class="col-sm-4">
+                  <small class="text-muted d-block">Desviación Residual IA</small>
+                  <span id="resultadoPrecision" class="h4 fw-bold text-info">0.04 mm</span>
+                </div>
+                <div class="col-sm-4">
+                  <small class="text-muted d-block">Estado de Viabilidad</small>
+                  <span id="resultadoEstado" class="badge bg-success fs-6 mt-1">ÓPTIMO / SEGURO</span>
+                </div>
+              </div>
+              <p id="detalleProcedimiento" class="small text-secondary-light text-center mt-3 mb-0">
+                Sincronización estereotáctica submilimétrica activa con predicción de trayectoria de 12 ms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: PREGUNTAS FRECUENTES (ACCORDION BOOTSTRAP) -->
+  <section id="faq" class="py-5 bg-section-alt">
+    <div class="container py-4" style="max-width: 850px;">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-semibold text-uppercase small">Seguridad y Gobernanza</span>
+        <h2 class="fw-bold mt-2">Protocolos Clínicos y Ciberseguridad</h2>
+      </div>
+
+      <div class="accordion" id="accordionProtocolos">
+        <div class="accordion-item glass-card mb-3 border-0">
+          <h3 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+              ¿Qué ocurre si se interrumpe la conexión durante una cirugía remota?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionProtocolos">
+            <div class="accordion-body text-secondary-light small">
+              Los robots quirúrgicos modernos operan con un sistema de <strong>conmutación autónoma segura (Fail-Safe)</strong>. Ante cualquier microcorte superior a 15 ms, los brazos detienen instantáneamente cualquier avance mecánico, mantienen la hemostasia activa y transfieren el control local a un cirujano asistente presente en el quirófano mediante doble enlace redundante.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item glass-card mb-3 border-0">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+              ¿El robot toma decisiones quirúrgicas sin supervisión humana?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionProtocolos">
+            <div class="accordion-body text-secondary-light small">
+              No. Bajo los estándares regulatorios internacionales actuales, los sistemas operan bajo <strong>autonomía supervisada (Nivel 2 y 3)</strong>: la IA automatiza subtareas repetitivas de alta precisión —como suturas continuas o estabilización ante el latido cardíaco—, pero el cirujano humano mantiene el control estratégico y la autorización continua mediante pedales y sensores ópticos de presencia.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item glass-card border-0">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+              ¿Cómo se protege la telemetría quirúrgica frente a ciberataques?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionProtocolos">
+            <div class="accordion-body text-secondary-light small">
+              El canal de control utiliza cifrado de extremo a extremo de grado cuántico-resistente (AES-256-GCM con intercambio de claves TLS 1.3), redes privadas virtuales dedicadas (VPN MPLS) aisladas de Internet público y verificación biométrica multifactor del cirujano en consola.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-top border-secondary border-opacity-25">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 small text-muted">
+      <div>
+        <strong class="text-white">NeuroSurg AI</strong> — Universidad de Panamá (CRU de Coclé) | Herramientas para el Desarrollo de Sitios Web I
+      </div>
+      <div>
+        Optimizado con <span class="text-primary">Sass + Bootstrap 5 Overrides + Lightning CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica interactiva del simulador -->
+  <script src="js/main.js"></script>
+</body>
+</html>

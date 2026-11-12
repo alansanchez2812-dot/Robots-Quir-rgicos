@@ -1,0 +1,15 @@
+{
+  "name": "neurosurg-ai-landing",
+  "version": "1.0.0",
+  "description": "Landing page responsive sobre Robots Quirúrgicos Asistidos por IA optimizada con Sass, Bootstrap Overrides y Lightning CSS",
+  "scripts": {
+    "sass:build": "sass scss/main.scss css/styles.css --no-source-map",
+    "css:optimize": "lightningcss --minify --bundle --targets \">= 0.25%\" css/styles.css -o css/styles.min.css",
+    "build": "npm run sass:build && npm run css:optimize"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "lightningcss-cli": "^1.29.1",
+    "sass": "^1.83.0"
+  }
+}
