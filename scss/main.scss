@@ -1,0 +1,155 @@
+@use "sass:color";
+
+// ==========================================================================
+// 1. SOBRESCRITURA DE VARIABLES DE BOOTSTRAP (BOOTSTRAP VARIABLE OVERRIDES)
+// ==========================================================================
+$primary: #00d4ff;
+$secondary: #64748b;
+$success: #10b981;
+$info: #38bdf8;
+$dark: #050a14;
+$body-bg: #050a14;
+$body-color: #e2e8f0;
+
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+$border-radius: 0.85rem;
+$border-radius-lg: 1.15rem;
+$enable-shadows: true;
+$enable-smooth-scroll: true;
+
+// En entorno Node.js con npm install bootstrap, descomentar la siguiente línea:
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+// ==========================================================================
+// 2. VARIABLES Y MIXINS PROPIOS DEL TEMA MÉDICO-ROBÓTICO
+// ==========================================================================
+$surface-glass: rgba(15, 23, 42, 0.72);
+$border-glass: rgba(0, 212, 255, 0.18);
+$bg-alt-section: #081020;
+
+@mixin glass-panel($blur: 14px) {
+  background: $surface-glass;
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+  border: 1px solid $border-glass;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+@mixin neon-glow($color) {
+  box-shadow: 0 0 18px rgba($color, 0.35);
+}
+
+// ==========================================================================
+// 3. REGLAS MODULARES ANIDADAS (NESTING)
+// ==========================================================================
+:root {
+  --bs-primary: #{$primary};
+  --bs-primary-rgb: 0, 212, 255;
+  --bs-body-bg: #{$body-bg};
+  --bs-body-color: #{$body-color};
+}
+
+body {
+  background-color: $body-bg;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba($primary, 0.08), transparent 35%),
+    radial-gradient(circle at 85% 75%, rgba($success, 0.07), transparent 40%);
+  color: $body-color;
+  font-family: $font-family-sans-serif;
+  overflow-x: hidden;
+}
+
+.glass-nav {
+  background: rgba(5, 10, 20, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba($primary, 0.15);
+
+  .brand-pulse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $success;
+    @include neon-glow($success);
+  }
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
+
+  .badge-tech {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: $primary;
+    background: rgba($primary, 0.1);
+    border: 1px solid rgba($primary, 0.25);
+    border-radius: 50rem;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, $primary 0%, $success 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.glass-card {
+  @include glass-panel(14px);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($primary, 0.45);
+  }
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: rgba($primary, 0.1);
+  border: 1px solid rgba($primary, 0.2);
+}
+
+.bg-section-alt {
+  background-color: $bg-alt-section;
+}
+
+.text-secondary-light {
+  color: #94a3b8;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: #04101d;
+
+  &:hover {
+    background-color: color.adjust($primary, $lightness: 6%);
+    border-color: color.adjust($primary, $lightness: 6%);
+    color: #04101d;
+    @include neon-glow($primary);
+  }
+}
+
+.accordion-button {
+  &:not(.collapsed) {
+    color: $primary !important;
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
